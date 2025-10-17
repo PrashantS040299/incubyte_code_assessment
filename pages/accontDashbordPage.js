@@ -16,9 +16,9 @@ class AccountDashboardPage {
     this.availableAmounts = page.locator('td:nth-child(3)');
     
     // Navigation locators
-    this.logoutLink = page.locator('a[href=\"logout.htm\"]');
-    this.openNewAccountLink = page.locator('a[href=\"openaccount.htm\"]');
-    this.transferFundsLink = page.locator('a[href=\"transfer.htm\"]');
+    this.logoutLink = page.locator('a[href*=\"logout.htm\"]');
+    this.openNewAccountLink = page.locator('a[href*=\"openaccount.htm\"]');
+    this.transferFundsLink = page.locator('a[href*=\"transfer.htm\"]');
     
     // Welcome message
     this.welcomeMessage = page.locator('p.smallText');

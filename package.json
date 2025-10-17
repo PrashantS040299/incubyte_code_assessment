@@ -1,20 +1,28 @@
 {
   "name": "incubyte_assessment",
   "version": "1.0.0",
-  "description": "",
+  "description": "Automated testing for ParaBank application using Playwright with BDD and POM",
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
     "test:headed": "npx playwright test --headed",
     "test:debug": "npx playwright test --debug",
-    "cucumber": "npx cucumber-js"
+    "cucumber": "npx cucumber-js",
+    "report": "npx playwright show-report"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PrashantS040299/Incubyte_assessment.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing",
+    "bdd",
+    "cucumber",
+    "page-object-model"
+  ],
+  "author": "Automation Tester - Prashant Somaiya",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PrashantS040299/Incubyte_assessment/issues"

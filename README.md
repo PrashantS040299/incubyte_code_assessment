@@ -1,10 +1,9 @@
 # ParaBank Automation Testing Framework
 
-A comprehensive automation testing framework for ParaBank application using Playwright with BDD (Behavior-Driven Development) and POM (Page Object Model) patterns.
+A comprehensive automation testing framework for ParaBank application using Playwright and POM (Page Object Model) patterns.
 
 ## 🚀 Features
 
-- **BDD Framework**: Cucumber integration with Gherkin feature files
 - **Page Object Model**: Clean, maintainable page object classes
 - **Cross-browser Testing**: Chrome, Firefox, Safari, and mobile browsers
 - **Comprehensive Reporting**: HTML, JSON, and JUnit reports
@@ -22,9 +21,9 @@ parabank-automation/
 ├── cucumber.config.js
 ├── tests/
 │   ├── features/
-│   │   └── signup-login.feature      # BDD feature files
+│   │   └── signup-login.feature      # 
 │   ├── steps/
-│   │   └── signup-login.steps.js     # Step definitions
+│   │   └── signup-login.steps.js     
 │   └── parabank.spec.js              # Playwright test specs
 ├── pages/
 │   ├── registrationPage.js           # Registration page object
@@ -78,11 +77,6 @@ npm run test:headed
 npm run test:debug
 ```
 
-### Run Cucumber BDD Tests
-```bash
-npm run cucumber
-```
-
 ### View Test Reports
 ```bash
 npm run report
@@ -126,7 +120,6 @@ The framework generates multiple report formats:
 - **HTML Report**: Visual test results with screenshots
 - **JSON Report**: Machine-readable test results
 - **JUnit Report**: CI/CD integration compatible
-- **Cucumber Report**: BDD-specific reporting
 
 ## 🔧 Configuration
 
@@ -135,11 +128,6 @@ The framework generates multiple report formats:
 - Test timeouts and retries
 - Screenshot and video settings
 - Base URL configuration
-
-### Cucumber Configuration (`cucumber.config.js`)
-- Step definition paths
-- Report formats
-- Output directories
 
 ## 📱 Cross-Browser Support
 
@@ -158,11 +146,10 @@ The framework is ready for CI/CD integration with:
 ## 📝 Best Practices Implemented
 
 1. **Page Object Model**: Separates test logic from page interactions
-2. **BDD Framework**: Human-readable test scenarios
-3. **Error Handling**: Robust error handling and recovery
-4. **Logging**: Comprehensive test execution logging
-5. **Screenshots**: Visual proof of test execution
-6. **Code Organization**: Clear folder structure and naming conventions
+2. **Error Handling**: Robust error handling and recovery
+3. **Logging**: Comprehensive test execution logging
+4. **Screenshots**: Visual proof of test execution
+5. **Code Organization**: Clear folder structure and naming conventions
 
 ## 🔍 Test Data
 

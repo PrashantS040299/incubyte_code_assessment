@@ -15,8 +15,8 @@ function generateUserData() {
     zipCode: faker.location.zipCode(),
     phone: faker.phone.number('###-###-####'),
     ssn: faker.datatype.number({ min: 100000000, max: 999999999 }).toString(),
-    username: `testuser${timestamp}`,
-    password: 'TestPassword123!'
+    username: `i${timestamp}vupra`,
+    password: `T${timestamp}!`
   };
 }
 

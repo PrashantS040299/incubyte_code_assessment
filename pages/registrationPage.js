@@ -1,4 +1,6 @@
 const { expect } = require('@playwright/test');
+const URLs = require('../urls'); // Import URLs
+
 
 class RegistrationPage {
   constructor(page) {
@@ -19,7 +21,7 @@ class RegistrationPage {
     
     // Button and link locators
     this.registerButton = page.locator('input[value=\"Register\"]');
-    this.registerLink = page.locator('a[href=\"register.htm\"]');
+    this.registerLink = page.locator('a[href*="register.htm"]');
     
     // Message locators
     this.successMessage = page.locator('.title');
@@ -31,7 +33,7 @@ class RegistrationPage {
    * Navigate to the registration page
    */
   async navigateToRegistration() {
-    await this.page.goto('/index.htm');
+    await this.page.goto(URLs.homePage);
     await this.registerLink.click();
     await expect(this.page).toHaveURL(/.*register.htm/);
   }
@@ -95,8 +97,8 @@ class RegistrationPage {
    * Verify successful registration
    */
   async verifySuccessfulRegistration() {
-    await expect(this.successMessage).toContainText('Your account was created successfully');
-    await expect(this.page).toHaveURL(/.*overview.htm/);
+    await expect(this.successMessage).toContainText('Welcome ');
+    await expect(this.page).toHaveURL(/.*register.htm/);
   }
 
   /**

@@ -1,4 +1,5 @@
 const { expect } = require('@playwright/test');
+const URLs = require('../urls'); // Import URLs
 
 class LoginPage {
   constructor(page) {
@@ -10,7 +11,7 @@ class LoginPage {
     this.loginButton = page.locator('input[value=\"Log In\"]');
     
     // Navigation locators
-    this.loginLink = page.locator('a[href=\"index.htm\"]');
+    this.loginLink = page.locator('a[href*=\"index.htm\"]');
     
     // Message locators
     this.errorMessage = page.locator('.error');
@@ -21,7 +22,7 @@ class LoginPage {
    * Navigate to the login page
    */
   async navigateToLogin() {
-    await this.page.goto('/index.htm');
+    await this.page.goto(URLs.homePage);
     await expect(this.page).toHaveURL(/.*index.htm/);
   }
 
@@ -56,7 +57,7 @@ class LoginPage {
    * Check if user is logged in by looking for logout link
    */
   async isUserLoggedIn() {
-    const logoutLink = this.page.locator('a[href=\"logout.htm\"]');
+    const logoutLink = this.page.locator('a[href*=\"logout.htm\"]');
     return await logoutLink.isVisible();
   }
 
@@ -64,7 +65,7 @@ class LoginPage {
    * Logout the current user
    */
   async logout() {
-    const logoutLink = this.page.locator('a[href=\"logout.htm\"]');
+    const logoutLink = this.page.locator('a[href*=\"logout.htm\"]');
     if (await logoutLink.isVisible()) {
       await logoutLink.click();
     }
